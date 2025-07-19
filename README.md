@@ -13,7 +13,7 @@ A CLI tool for managing translations in projects using next-translate.
 ## Installation
 
 ```sh
-npm install -g tcli
+npm install -g @dmvicent3/tcli
 ```
 
 ## Usage
@@ -69,7 +69,7 @@ You can get an API key from: https://makersuite.google.com/app/apikey
 ### Setup
 
 ```sh
-git clone <repository-url>
+git clone https://github.com/dmvicent3/tcli.git
 cd tcli
 bun install
 ```
@@ -100,22 +100,6 @@ This project uses [Changesets](https://github.com/changesets/changesets) for ver
 3. Follow the prompts to describe your changes
 4. Commit the changeset file
 5. Push to the main branch
-
-### Publishing
-
-The project uses GitHub Actions to automatically:
-- Create release PRs when changesets are added
-- Publish to NPM when release PRs are merged
-
-### Manual Release (if needed)
-
-```sh
-# Version packages
-bun run version
-
-# Build and publish
-bun run release
-```
 
 ## License
 
