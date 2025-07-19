@@ -34,7 +34,7 @@
     "dev": "bun run src/index.ts",
     "changeset": "changeset",
     "version": "changeset version",
-    "release": "bun run build && changeset publish"
+    "release": "bun run build && npm publish"
   },
   "dependencies": {
     "@clack/prompts": "^0.7.0",
