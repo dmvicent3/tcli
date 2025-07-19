@@ -2,4 +2,4 @@
 "tcli": patch
 ---
 
-Initial Release
+fix release workflow
