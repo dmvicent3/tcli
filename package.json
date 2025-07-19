@@ -1,0 +1,47 @@
+{
+  "name": "@dmvicent3/tcli",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "dist/index.js",
+  "bin": {
+    "tcli": "./dist/index.js"
+  },
+  "description": "A CLI tool for managing translations in projects using next-translate",
+  "keywords": [
+    "translation",
+    "cli",
+    "next-translate",
+    "i18n",
+    "internationalization"
+  ],
+  "author": "dmvicent3",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dmvicent3/tcli.git"
+  },
+  "homepage": "https://github.com/dmvicent3/tcli#readme",
+  "bugs": {
+    "url": "https://github.com/dmvicent3/tcli/issues"
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "scripts": {
+    "check-ts": "bunx tsc --noEmit",
+    "build": "bun build src/index.ts --outdir dist --target bun",
+    "release": "bun run build && bun publish -p --access public",
+    "dev": "bun run src/index.ts"
+  },
+  "dependencies": {
+    "@clack/prompts": "^0.7.0",
+    "@google/genai": "^1.10.0",
+    "commander": "^11.1.0"
+  },
+  "devDependencies": {
+    "@changesets/cli": "^2.29.5",
+    "@types/node": "^20.10.0",
+    "typescript": "^5.3.0"
+  }
+}
