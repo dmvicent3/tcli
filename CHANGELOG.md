@@ -1,5 +1,11 @@
 # @dmvicent3/tcli
 
+## 1.2.0
+
+### Minor Changes
+
+- 8c66093: Add missing file
+
 ## 1.1.0
 
 ### Minor Changes
