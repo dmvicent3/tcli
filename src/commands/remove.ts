@@ -1,6 +1,6 @@
 import { text, confirm, isCancel } from '@clack/prompts'
-import { requireConfig } from '../lib/config'
-import { loadTranslationFile, saveTranslationFile } from '../lib/files'
+import { requireConfig } from '../lib/config.js'
+import { loadTranslationFile, saveTranslationFile } from '../lib/files.js'
 
 export async function removeCommand(
   key?: string,

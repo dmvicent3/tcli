@@ -1,8 +1,8 @@
 import { readFileSync } from 'fs'
 import { text, isCancel } from '@clack/prompts'
-import { requireConfig, getApiKey } from '../lib/config'
-import { loadTranslationFile, saveTranslationFile } from '../lib/files'
-import { GeminiTranslator } from '../lib/gemini'
+import { requireConfig, getApiKey } from '../lib/config.js'
+import { loadTranslationFile, saveTranslationFile } from '../lib/files.js'
+import { GeminiTranslator } from '../lib/gemini.js'
 import type { BatchTranslation } from '../types.ts'
 
 export async function batchCommand(

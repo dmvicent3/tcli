@@ -1,6 +1,6 @@
 import { confirm, isCancel } from '@clack/prompts'
-import { requireConfig, saveConfig } from '../lib/config'
-import { saveTranslationFile } from '../lib/files'
+import { requireConfig, saveConfig } from '../lib/config.js'
+import { saveTranslationFile } from '../lib/files.js'
 import { existsSync, unlinkSync } from 'fs'
 import { join } from 'path'
 

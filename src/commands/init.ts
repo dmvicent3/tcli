@@ -1,6 +1,6 @@
 import { text, multiselect, select, isCancel } from '@clack/prompts'
-import { getApiKey, loadConfig, saveConfig } from '../lib/config'
-import { scanExistingStructure } from '../lib/files'
+import { getApiKey, loadConfig, saveConfig } from '../lib/config.js'
+import { scanExistingStructure } from '../lib/files.js'
 import type { Config } from '../types.ts'
 
 const COMMON_LANGUAGES = [

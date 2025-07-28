@@ -1,21 +1,21 @@
 import { Command } from 'commander'
-import { initCommand } from './commands/init'
-import { addCommand } from './commands/add'
-import { updateCommand } from './commands/update'
-import { removeCommand } from './commands/remove'
-import { batchCommand } from './commands/batch'
+import { initCommand } from './commands/init.js'
+import { addCommand } from './commands/add.js'
+import { updateCommand } from './commands/update.js'
+import { removeCommand } from './commands/remove.js'
+import { batchCommand } from './commands/batch.js'
 import {
   nsAddCommand,
   nsRemoveCommand,
   nsListCommand,
   nsDefaultCommand,
-} from './commands/namespace'
+} from './commands/namespace.js'
 import {
   langAddCommand,
   langRemoveCommand,
   langListCommand,
-} from './commands/language'
-import { verifyCommand } from './commands/verify'
+} from './commands/language.js'
+import { verifyCommand } from './commands/verify.js'
 
 const program = new Command()
 

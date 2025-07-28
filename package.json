@@ -1,6 +1,6 @@
 {
   "name": "@dmvicent3/tcli",
-  "version": "1.3.0",
+  "version": "1.1.0",
   "type": "module",
   "main": "./tcli.cjs",
   "bin": {
@@ -31,7 +31,7 @@
   ],
   "scripts": {
     "check-ts": "bunx tsc --noEmit",
-    "build": "bun build src/index.ts --outdir dist --target bun",
+    "build": "tsc",
     "release": "bun run build && bun publish -p --access public",
     "dev": "bun run src/index.ts"
   },

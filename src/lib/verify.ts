@@ -1,5 +1,5 @@
 import type { Config } from '../types.ts'
-import { loadTranslationFile } from './files'
+import { loadTranslationFile } from './files.js'
 
 export function verifyTranslations(config: Config): void {
   const allNamespaceKeys: Record<string, Set<string>> = {}
