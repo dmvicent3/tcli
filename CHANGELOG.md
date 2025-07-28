@@ -1,5 +1,11 @@
 # @dmvicent3/tcli
 
+## 1.3.0
+
+### Minor Changes
+
+- ba506be: add .cjs launcher and update bin/files for ESM compatibility
+
 ## 1.2.0
 
 ### Minor Changes
