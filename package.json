@@ -4,7 +4,7 @@
   "type": "module",
   "main": "dist/index.js",
   "bin": {
-    "tcli": "./dist/index.js"
+    "tcli": "./tcli"
   },
   "description": "A CLI tool for managing translations in projects using next-translate",
   "keywords": [
