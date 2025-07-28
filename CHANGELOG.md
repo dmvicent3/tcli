@@ -1,5 +1,11 @@
 # @dmvicent3/tcli
 
+## 1.6.0
+
+### Minor Changes
+
+- abaf8fc: Normalize existing language/namespace identifiers
+
 ## 1.5.0
 
 ### Minor Changes
