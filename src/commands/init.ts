@@ -41,11 +41,13 @@ export async function initCommand(): Promise<void> {
   }
 
   const existing = scanExistingStructure(langDir as string)
+  const existingLangs = existing.langs.map((l) => l.toLowerCase())
+  const existingNamespaces = existing.namespaces.map((ns) => ns.toLowerCase())
 
   const selectedLangs = await multiselect({
     message: 'Select languages to support:',
     options: COMMON_LANGUAGES,
-    initialValues: existing.langs.length > 0 ? existing.langs : ['en-us'],
+    initialValues: existingLangs.length > 0 ? existingLangs : ['en-us'],
   })
 
   if (isCancel(selectedLangs)) {
@@ -75,7 +77,7 @@ export async function initCommand(): Promise<void> {
 
     const additionalLangs = (customLangs as string)
       .split(',')
-      .map((lang) => lang.trim())
+      .map((lang) => lang.trim().toLowerCase())
       .filter(Boolean)
     finalLangs.push(...additionalLangs)
   }
@@ -84,7 +86,9 @@ export async function initCommand(): Promise<void> {
     message: 'Select source language:',
     options: finalLangs.map((lang) => ({
       value: lang,
-      label: COMMON_LANGUAGES.find((l) => l.value === lang)?.label || lang,
+      label:
+        COMMON_LANGUAGES.find((l) => l.value.toLowerCase() === lang)?.label ||
+        lang,
     })),
   })
 
@@ -94,7 +98,7 @@ export async function initCommand(): Promise<void> {
   }
 
   const allNamespaces = [
-    ...new Set([...existing.namespaces, 'common', 'home', 'auth', 'errors']),
+    ...new Set([...existingNamespaces, 'common', 'home', 'auth', 'errors']),
   ]
   const namespaceOptions = [
     ...allNamespaces.map((ns) => ({ value: ns, label: ns })),
@@ -105,7 +109,7 @@ export async function initCommand(): Promise<void> {
     message: 'Select namespaces:',
     options: namespaceOptions,
     initialValues:
-      existing.namespaces.length > 0 ? existing.namespaces : ['common'],
+      existingNamespaces.length > 0 ? existingNamespaces : ['common'],
   })
 
   if (isCancel(selectedNamespaces)) {
@@ -135,7 +139,7 @@ export async function initCommand(): Promise<void> {
 
     const additionalNamespaces = (customNamespaces as string)
       .split(',')
-      .map((ns) => ns.trim())
+      .map((ns) => ns.trim().toLowerCase())
       .filter(Boolean)
     finalNamespaces.push(...additionalNamespaces)
   }
