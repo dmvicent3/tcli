@@ -2,7 +2,7 @@
   "name": "@dmvicent3/tcli",
   "version": "1.0.1",
   "type": "module",
-  "main": "dist/index.js",
+  "main": "./tcli",
   "bin": {
     "tcli": "./tcli"
   },
@@ -26,6 +26,7 @@
   },
   "files": [
     "dist",
+    "tcli",
     "README.md"
   ],
   "scripts": {
