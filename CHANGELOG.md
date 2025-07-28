@@ -1,5 +1,11 @@
 # @dmvicent3/tcli
 
+## 1.5.0
+
+### Minor Changes
+
+- a75982b: improve workflow
+
 ## 1.4.0
 
 ### Minor Changes
