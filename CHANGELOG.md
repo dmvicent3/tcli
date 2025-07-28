@@ -1,5 +1,11 @@
 # @dmvicent3/tcli
 
+## 1.4.0
+
+### Minor Changes
+
+- 062af76: fix: use dynamic import in launcher for ESM compatibility
+
 ## 1.3.0
 
 ### Minor Changes
