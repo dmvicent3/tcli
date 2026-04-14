@@ -11,7 +11,7 @@ export class GeminiTranslator {
   async translate(
     text: string,
     fromLang: string,
-    toLang: string
+    toLang: string,
   ): Promise<string> {
     const s = spinner()
     s.start(`Translating to ${toLang}`)
@@ -20,7 +20,7 @@ export class GeminiTranslator {
       const prompt = `Translate the following text from ${fromLang} to ${toLang}. Return only the translation, no explanations: "${text}"`
 
       const result = await this.genAI.models.generateContent({
-        model: 'gemini-2.0-flash',
+        model: 'gemma-4-31b-it',
         contents: prompt,
       })
 
@@ -36,14 +36,14 @@ export class GeminiTranslator {
         error.message?.includes('503')
       ) {
         console.error(
-          `[tcli] Translation service is overloaded. Please try again in a few moments.`
+          `[tcli] Translation service is overloaded. Please try again in a few moments.`,
         )
       } else if (
         error.message?.includes('quota') ||
         error.message?.includes('429')
       ) {
         console.error(
-          `[tcli] API quota exceeded. Please check your Gemini API usage.`
+          `[tcli] API quota exceeded. Please check your Gemini API usage.`,
         )
       } else {
         console.error(`[tcli] Translation failed: ${error.message}`)
@@ -56,7 +56,7 @@ export class GeminiTranslator {
   async batchTranslate(
     texts: Record<string, string>,
     fromLang: string,
-    toLang: string
+    toLang: string,
   ): Promise<Record<string, string>> {
     const s = spinner()
     s.start(`Batch translating ${Object.keys(texts).length} keys to ${toLang}`)
@@ -94,14 +94,14 @@ export class GeminiTranslator {
         error.message?.includes('503')
       ) {
         console.error(
-          `[tcli] Translation service is overloaded. Please try again in a few moments.`
+          `[tcli] Translation service is overloaded. Please try again in a few moments.`,
         )
       } else if (
         error.message?.includes('quota') ||
         error.message?.includes('429')
       ) {
         console.error(
-          `[tcli] API quota exceeded. Please check your Gemini API usage.`
+          `[tcli] API quota exceeded. Please check your Gemini API usage.`,
         )
       } else {
         console.error(`[tcli] Batch translation failed: ${error.message}`)
