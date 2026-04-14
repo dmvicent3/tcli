@@ -1,6 +1,6 @@
 {
   "name": "@dmvicent3/tcli",
-  "version": "1.6.1",
+  "version": "1.7.0",
   "type": "module",
   "main": "./tcli.cjs",
   "bin": {
