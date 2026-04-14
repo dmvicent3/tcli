@@ -1,5 +1,11 @@
 # @dmvicent3/tcli
 
+## 1.7.0
+
+### Minor Changes
+
+- 4211a44: version bump
+
 ## 1.6.0
 
 ### Minor Changes
